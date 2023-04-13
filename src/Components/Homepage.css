@@ -1,0 +1,44 @@
+.logo{
+    width: 5%;
+    height: 5%;
+    margin-left: 57%;
+    position:absolute;
+    top: 5.5%;
+}
+
+.Back-Ground{
+    width: 53%;
+    height: 90vh;
+    position:sticky;
+}
+
+.Title_Home{
+    position:absolute;
+    top: 6%;
+    right:5%;
+}
+
+.Subtitle_Home{
+    position:absolute;
+    right:-60%;
+    top:16%;
+}
+
+.card{
+    max-width: 23.5%;
+    max-height: 5%;
+    position:relative;
+    right:-78%;
+    margin-top: -75%;
+}
+
+.container{
+    background-color: #7851a9;
+}
+
+.Home {
+    background-color: grey;
+}
+.img {
+    background-color: red;
+}
