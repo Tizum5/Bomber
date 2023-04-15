@@ -25,12 +25,14 @@
 }
 
 .card{
-    max-width: 23.5%;
-    max-height: 5%;
+    max-width: 33.5%;
+    max-height: 10%;
     position:relative;
-    right:-78%;
-    margin-top: -75%;
+    right:-68%;
+    transform: translateY(-125%);
+    padding-bottom: -10%;
 }
+
 
 .container{
     background-color: #7851a9;
