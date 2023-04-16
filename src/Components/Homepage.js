@@ -3,6 +3,9 @@ import "./Homepage.css";
 import {PhoneNumberInput} from "./PhoneNumberInput.js";
 import CountryCodesDropdown from './CountryCodes';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import DOBDatePicker from "./DOBDatePicker";
+
+
 
 const Homepage = () => {
   return (
@@ -10,13 +13,13 @@ const Homepage = () => {
         <div className='Home_Left'>
           <div className='container'>
           <div className='row'>
-            <div className='col '>
+            <div className='col '>{/*background img */}
               <img className="Back-Ground img-fluid rounded float-start d-block"  src="/assets/Bomber-Background.png" alt="Bomber-Background"/>
             </div>
           </div>
           <div className='row'>
-            <div className="col">
-              <img className="logo img-fluid rounded d-block" src="/assets/bolt-bomb.svg" alt="Bolt bomb" />
+            <div className="col"> {/*logo */}
+              <img className="logo img-fluid rounded" src="/assets/bolt-bomb.svg" alt="Bolt bomb" />
             </div>
           </div>
           </div>
@@ -25,9 +28,9 @@ const Homepage = () => {
           <div className='container'>
             <div className='row'>
               <div className='col'>
-                <h1 className='Title_Home'>Bomber</h1>
+                <h1 className='Title_Home mx-5'>Bomber</h1>
               </div>
-              <div className='col Subtitle_Home'>
+              <div className='col Subtitle_Home mx-3'>
                 <h3>Instant Adventure</h3>
               </div>
             </div>
@@ -45,68 +48,67 @@ const Homepage = () => {
               </div>
             </div>
             <div className='row'>
-              <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#sign-up">
-                Sign Up
-              </button>
-              <div className="modal fade" id= "sign-up" tabIndex="-1" aria-labelledby="sign-up" aria-hidden="true">
-                <div className="modal-dialog">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h1 className="modal-title fs-5" id="sign-up">...JOIN US</h1>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-                    </div>
-                    <div className="modal-body">
-                      <div className='SignIN_Buttons px-5 card-body gap-2'>
-                        <button type="button" href="#" className="mx-1 my-1 btn btn-success btn-outline-warning text-primary">Google</button>
-                        <button type="button" href="#" className="my-1 mx-1 btn btn-danger btn-outline-dark text-light">Auth</button>
-                        <button type="button" href="#" className="my-1 mx-1 btn btn-secondary btn-outline-dark">Apple</button>
+              <div className="col ">
+                <button type="button " className="sign-Up-Button btn btn-info" data-bs-toggle="modal" data-bs-target="#sign-up">
+                  Sign Up
+                </button>
+                <div className="modal fade" id= "sign-up" tabIndex="-1" aria-labelledby="sign-up" aria-hidden="true">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="sign-up">...JOIN US</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                       </div>
-                      <form>
-                        <div className="mb-3">
-                          <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                          <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                      <div className="modal-body">
+                        <div className='SignIN_Buttons px-5 card-body gap-2'>
+                          <button type="button" href="#" className="mx-1 my-1 btn btn-success btn-outline-warning text-primary">Google</button>
+                          <button type="button" href="#" className="my-1 mx-1 btn btn-danger btn-outline-dark text-light">Auth</button>
+                          <button type="button" href="#" className="my-1 mx-1 btn btn-secondary btn-outline-dark">Apple</button>
                         </div>
-                        <div className="mb-3">
-                          <div className="row g-3 align-items-center">
-                            <div className="col-auto">
-                              <label htmlFor="inputPassword6" className="col-form-label">Password</label>
-                            </div>
-                            <div className="col-auto">
-                              <input type="password" id="inputPassword6" className="form-control" aria-labelledby="passwordHelpInline"/>
-                            </div>
-                            <div className="col-auto">
-                              <span id="passwordHelpInline" className="form-text">
-                                Must be 8-20 characters long.
-                              </span>
+                        <form>
+                          <div className="mb-3">
+                            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                          </div>
+                          <div className="mb-3">
+                            <div className="row g-3 align-items-center">
+                              <div className="col-auto">
+                                <label htmlFor="inputPassword6" className="col-form-label">Password</label>
+                              </div>
+                              <div className="col-auto">
+                                <input type="password" id="inputPassword6" className="form-control" aria-labelledby="passwordHelpInline"/>
+                              </div>
+                              <div className="col-auto">
+                                <span id="passwordHelpInline" className="form-text">
+                                  Must be 8-20 characters long.
+                                </span>
+                              </div>
                             </div>
                           </div>
+                          <div div>
+                            <div className="mb-3">
+                              <div className="input-group">
+                                <span className="input-group-text">First and last name</span>
+                                <input type="text" aria-label="First name" className="form-control"/>
+                                <input type="text" aria-label="Last name" className="form-control"/>
+                              </div>
+                            </div> {/*fix drop down */}
+                            <div className="dropdown mb-3">
+                              <CountryCodesDropdown/>
+                            </div>
+                            <div className="mb-3">
+                              <h6>Phone Number</h6>
+                              <PhoneNumberInput/>
+                            </div>
+                              <DOBDatePicker />
+                            </div>
+                          </form>
                         </div>
-                        <div>
-                        <div className="mb-3">
-                          <div className="input-group">
-                            <span className="input-group-text">First and last name</span>
-                            <input type="text" aria-label="First name" className="form-control"/>
-                            <input type="text" aria-label="Last name" className="form-control"/>
-                          </div>
-                        </div> {/*fix drop down */}
-                        <div className="dropdown mb-3">
-                          <CountryCodesDropdown/>
-                        </div>
-                        <div className="mb-3">
-                          <h6>Phone Number</h6>
-                          <PhoneNumberInput/>
-                        </div>
-                        {/*add a date picker for DOB */}
-                        </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className='col Sign_UpTitle'>
-                <h5>Sign Up</h5>
-              </div>
             </div>
           </div>
         </div>
@@ -123,6 +125,6 @@ const Homepage = () => {
         </div>
       </div>
   );
-};
+}
 
 export default Homepage;

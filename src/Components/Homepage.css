@@ -1,16 +1,18 @@
 .logo{
     width: 5%;
     height: 5%;
-    margin-left: 57%;
+    margin-left: 51%;
     position:absolute;
     top: 5.5%;
 }
-
-.Back-Ground{
+/* img */
+.Back-Ground {
     width: 53%;
-    height: 90vh;
-    position:sticky;
+    height: 100vh;
+    max-height: 1500px;
+    width:53%;
 }
+
 
 .Title_Home{
     position:absolute;
@@ -29,7 +31,7 @@
     max-height: 10%;
     position:relative;
     right:-68%;
-    transform: translateY(-125%);
+    transform: translateY(-43%);
     padding-bottom: -10%;
 }
 
@@ -41,6 +43,9 @@
 .Home {
     background-color: grey;
 }
-.img {
-    background-color: red;
-}
+
+.sign-Up-Button {
+    position: relative;
+    top: -130px;
+  }
+  
